@@ -1,15 +1,18 @@
 package io.github.osamabmaq.tafqeetj.numbers;
 
 public class QuantitiveNumberNames {
-    private final String nameWhenEqualsOne;
-    private final String nameWhenEqualsTwo;
-    private final String nameWhenBetweenThreeAndTen; //Inclusive
-    private final String nameWhenBetweenElevenAndNinetyNine; //Inclusive
 
-    public QuantitiveNumberNames(String nameWhenEqualsOne,
-                                 String nameWhenEqualsTwo,
-                                 String nameWhenBetweenThreeAndTen,
-                                 String nameWhenBetweenElevenAndNinetyNine) {
+    private final String nameWhenEqualsOne;
+
+    private final String nameWhenEqualsTwo;
+
+    //Inclusive
+    private final String nameWhenBetweenThreeAndTen;
+
+    //Inclusive
+    private final String nameWhenBetweenElevenAndNinetyNine;
+
+    public QuantitiveNumberNames(String nameWhenEqualsOne, String nameWhenEqualsTwo, String nameWhenBetweenThreeAndTen, String nameWhenBetweenElevenAndNinetyNine) {
         this.nameWhenEqualsOne = nameWhenEqualsOne;
         this.nameWhenEqualsTwo = nameWhenEqualsTwo;
         this.nameWhenBetweenThreeAndTen = nameWhenBetweenThreeAndTen;
@@ -17,28 +20,23 @@ public class QuantitiveNumberNames {
     }
 
     public String getNameWhenEqualsOne() {
-        return nameWhenEqualsOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getNameWhenEqualsTwo() {
-        return nameWhenEqualsTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getNameWhenBetweenThreeAndTen() {
-        return nameWhenBetweenThreeAndTen;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getNameWhenBetweenElevenAndNinetyNine() {
-        return nameWhenBetweenElevenAndNinetyNine;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public String toString() {
-        return "QuantitiveNumberNames{" +
-                "nameWhenEqualsOne='" + nameWhenEqualsOne + '\'' +
-                ", nameWhenEqualsTwo='" + nameWhenEqualsTwo + '\'' +
-                ", nameWhenBetweenThreeAndTen='" + nameWhenBetweenThreeAndTen + '\'' +
-                ", nameWhenBetweenElevenAndNinetyNine='" + nameWhenBetweenElevenAndNinetyNine + '\'' +
-                '}';
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

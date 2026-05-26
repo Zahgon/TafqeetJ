@@ -1,41 +1,33 @@
 package io.github.osamabmaq.tafqeetj.converters;
 
 import io.github.osamabmaq.tafqeetj.numbers.ThreeDigitsNumber;
-
 import java.util.Objects;
 
 public class ThreeDigitsNumberDisassembler {
+
     private final ThreeDigitsNumber threeDigitsNumber;
 
     public ThreeDigitsNumberDisassembler(ThreeDigitsNumber threeDigitsNumber) {
         this.threeDigitsNumber = Objects.requireNonNull(threeDigitsNumber);
     }
 
-    public ThreeDigitsNumber getThreeDigitsNumber(){
-        return threeDigitsNumber;
+    public ThreeDigitsNumber getThreeDigitsNumber() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getHundreds() {
-        if (!threeDigitsNumber.containsHundreds())
-            throw new IllegalStateException("Number does not contain hundreds");
-        return (threeDigitsNumber.getNumber() / 100) * 100;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getTens() {
-        if (!threeDigitsNumber.containsTens())
-            throw new IllegalStateException("Number does not contain tens");
-        return ((threeDigitsNumber.getNumber() % 100) / 10) * 10;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getComposedNumber() {
-        if (!threeDigitsNumber.containsComposedNumber())
-            throw new IllegalStateException("Number does not contain composed number");
-        return threeDigitsNumber.getNumber() % 100;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getOnes() {
-        if (!threeDigitsNumber.containsOnes())
-            throw new IllegalStateException("Number does not contain ones");
-        return (threeDigitsNumber.getNumber() % 100) % 10;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

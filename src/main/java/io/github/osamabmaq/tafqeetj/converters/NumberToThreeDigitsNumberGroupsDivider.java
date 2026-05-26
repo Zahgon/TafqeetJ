@@ -2,20 +2,14 @@ package io.github.osamabmaq.tafqeetj.converters;
 
 import io.github.osamabmaq.tafqeetj.numbers.ThreeDigitsNumber;
 import io.github.osamabmaq.tafqeetj.numbers.NumberSign;
-
 import java.util.*;
 
 public class NumberToThreeDigitsNumberGroupsDivider {
-    private static final List<String> groupsNames = List.of(
-            "basicNumberGroup", "thousands", "millions", "billions", "trillions"
-    );
+
+    private static final List<String> groupsNames = List.of("basicNumberGroup", "thousands", "millions", "billions", "trillions");
 
     public Map<String, ThreeDigitsNumber> divide(long number) {
-        List<ThreeDigitsNumber> numbersGroups = getThreeDigitsNumberList(
-                Long.toString(Math.abs(number)),
-                NumberSign.signOf(number)
-        );
-        return mapWithGroupsNames(numbersGroups);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private List<ThreeDigitsNumber> getThreeDigitsNumberList(String number, NumberSign sign) {
@@ -35,8 +29,7 @@ public class NumberToThreeDigitsNumberGroupsDivider {
 
     private Map<String, ThreeDigitsNumber> mapWithGroupsNames(List<ThreeDigitsNumber> numbersGroups) {
         Map<String, ThreeDigitsNumber> numbersGroupsMap = new HashMap<>();
-        for (int i = 0; i < numbersGroups.size(); i++)
-            numbersGroupsMap.put(groupsNames.get(i), numbersGroups.get(i));
+        for (int i = 0; i < numbersGroups.size(); i++) numbersGroupsMap.put(groupsNames.get(i), numbersGroups.get(i));
         return Collections.unmodifiableMap(numbersGroupsMap);
     }
 }

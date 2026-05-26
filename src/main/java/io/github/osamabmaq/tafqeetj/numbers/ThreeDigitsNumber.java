@@ -3,7 +3,9 @@ package io.github.osamabmaq.tafqeetj.numbers;
 import java.util.Objects;
 
 public class ThreeDigitsNumber {
+
     private final int number;
+
     private final NumberSign sign;
 
     private ThreeDigitsNumber(int number, NumberSign sign) {
@@ -14,51 +16,45 @@ public class ThreeDigitsNumber {
     }
 
     public static ThreeDigitsNumber of(int number, NumberSign sign) {
-        return new ThreeDigitsNumber(number, sign);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getNumber() {
-        return number;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public NumberSign getSign() {
-        return sign;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean containsHundreds() {
-        return number / 100 != 0;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean containsTens() {
-        return (number % 100) / 10 != 0;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean containsOnes() {
-        return (number % 100) % 10 != 0;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean containsComposedNumber() {
-        return containsTens() && containsOnes() && (number % 100) / 10 == 1;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ThreeDigitsNumber that = (ThreeDigitsNumber) o;
-        return number == that.number && sign == that.sign;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(number, sign);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public String toString() {
-        return "ThreeDigitsNumber{" +
-                "number=" + number +
-                ", sign=" + sign +
-                '}';
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

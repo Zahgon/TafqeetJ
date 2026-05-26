@@ -3,10 +3,10 @@ package io.github.osamabmaq.tafqeetj.converters;
 import io.github.osamabmaq.tafqeetj.exceptions.NumberOutOfRangeException;
 import io.github.osamabmaq.tafqeetj.numbers.FractionalRatioNames;
 import io.github.osamabmaq.tafqeetj.numbers.NumberSign;
-
 import java.math.BigDecimal;
 
 class DecimalToWordsConverter {
+
     private final IntegerToWordsConverter converter = IntegerToWordsConverter.getInstance();
 
     private static DecimalToWordsConverter instance;
@@ -15,26 +15,19 @@ class DecimalToWordsConverter {
     }
 
     public synchronized static DecimalToWordsConverter getInstance() {
-        if (instance == null)
-            instance = new DecimalToWordsConverter();
-        return instance;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public DecimalInWords convert(BigDecimal number) {
-        if (TafqeetRangeChecker.isOutOfRange(number))
-            throw new NumberOutOfRangeException(number);
-        String[] numberLeftAndRight = number.toPlainString().split("\\.");
-        if (numberLeftAndRight.length == 2)
-            numberLeftAndRight[1] = removeTrailingZeroes(numberLeftAndRight[1]);
-        return convertToDecimalInWords(numberLeftAndRight);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private String removeTrailingZeroes(String number) {
         int end = number.length();
-        for (int i = number.length() - 1; i > 0; i--)
-            if (number.charAt(i) == '0')
-                end = i;
-            else break;
+        for (int i = number.length() - 1; i > 0; i--) if (number.charAt(i) == '0')
+            end = i;
+        else
+            break;
         return number.substring(0, end);
     }
 
@@ -63,8 +56,7 @@ class DecimalToWordsConverter {
         return number;
     }
 
-    private DecimalInWords buildDecimalInWords(IntegerInWords leftNumber,
-                                               IntegerInWords rightNumber, int fractionalLength) {
+    private DecimalInWords buildDecimalInWords(IntegerInWords leftNumber, IntegerInWords rightNumber, int fractionalLength) {
         String fractionRatioName = "";
         if (!leftNumber.toString().equals(""))
             fractionRatioName = FractionalRatioNames.getRatio(fractionalLength);

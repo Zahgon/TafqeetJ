@@ -5,38 +5,18 @@ import io.github.osamabmaq.tafqeetj.numbers.QuantitiveNumberNames;
 import io.github.osamabmaq.tafqeetj.numbers.ThreeDigitsNumber;
 
 public class QuantitiveNumberConverter {
+
     private final QuantitiveNumberNames quantitiveNumberNames;
+
     private final BasicNumberConverter basicNumberConverter;
 
-    public QuantitiveNumberConverter(QuantitiveNumberNames quantitiveNumberNames,
-                                     BasicNumberConverter basicNumberConverter) {
+    public QuantitiveNumberConverter(QuantitiveNumberNames quantitiveNumberNames, BasicNumberConverter basicNumberConverter) {
         this.quantitiveNumberNames = quantitiveNumberNames;
         this.basicNumberConverter = basicNumberConverter;
     }
 
     public String convert(ThreeDigitsNumber number) {
-        if (number.getNumber() == 0)
-            return "";
-        StringBuilder numberInWords = new StringBuilder();
-        ThreeDigitsNumberDisassembler disassembler = new ThreeDigitsNumberDisassembler(number);
-        int numberAfterHundredsConverting = number.getNumber();
-
-        if (number.containsHundreds()) {
-            numberAfterHundredsConverting = number.getNumber() % 100;
-            if (disassembler.getHundreds() == 200 && numberAfterHundredsConverting < 3)
-                numberInWords.append(getTwoHundredsWordDependingOnNumberSign(number.getSign()));
-            else
-                numberInWords.append(basicNumberConverter.convertHundreds(disassembler.getHundreds()));
-        }
-
-        if (numberAfterHundredsConverting < 3)
-            return convertNumberBetweenZeroAndTwo(numberInWords, numberAfterHundredsConverting);
-
-        if (numberInWords.length() != 0)
-            numberInWords.append(" و");
-        return numberInWords.append(convertNumberBetweenThreeAndNinetyNine(
-                ThreeDigitsNumber.of(numberAfterHundredsConverting, number.getSign())))
-                .toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private String getTwoHundredsWordDependingOnNumberSign(NumberSign sign) {
@@ -47,7 +27,8 @@ public class QuantitiveNumberConverter {
 
     private String convertNumberBetweenZeroAndTwo(StringBuilder numberInWords, int number) {
         if (numberInWords.length() != 0)
-            numberInWords.append(" ").append(quantitiveNumberNames.getNameWhenEqualsOne()); //هذا للمئات، من مثل مئة ألف أو تسعمئة مليون
+            //هذا للمئات، من مثل مئة ألف أو تسعمئة مليون
+            numberInWords.append(" ").append(quantitiveNumberNames.getNameWhenEqualsOne());
         if (number != 0 && numberInWords.length() != 0)
             numberInWords.append(" و");
         if (number == 1)
@@ -71,10 +52,8 @@ public class QuantitiveNumberConverter {
         return basicNumberConverter.convertOnes(ones) + " " + quantitiveNumberNames.getNameWhenBetweenThreeAndTen();
     }
 
-
     private String convertComposedNumber(int composedNumber) {
-        return basicNumberConverter.convertComposedNumbers(composedNumber)
-                + " " + quantitiveNumberNames.getNameWhenBetweenElevenAndNinetyNine();
+        return basicNumberConverter.convertComposedNumbers(composedNumber) + " " + quantitiveNumberNames.getNameWhenBetweenElevenAndNinetyNine();
     }
 
     private String convertTensWithOnes(ThreeDigitsNumberDisassembler disassembler) {
@@ -82,19 +61,13 @@ public class QuantitiveNumberConverter {
             return convertTen();
         StringBuilder numberInWords = new StringBuilder();
         if (disassembler.getThreeDigitsNumber().containsOnes())
-            numberInWords.append(basicNumberConverter.convertOnes(disassembler.getOnes()))
-                    .append(" و")
-                    .append(basicNumberConverter.convertTens(disassembler.getTens()));
+            numberInWords.append(basicNumberConverter.convertOnes(disassembler.getOnes())).append(" و").append(basicNumberConverter.convertTens(disassembler.getTens()));
         else
             numberInWords.append(basicNumberConverter.convertTens(disassembler.getTens()));
-
-        return numberInWords.append(" ")
-                .append(quantitiveNumberNames.getNameWhenBetweenElevenAndNinetyNine())
-                .toString();
+        return numberInWords.append(" ").append(quantitiveNumberNames.getNameWhenBetweenElevenAndNinetyNine()).toString();
     }
 
     private String convertTen() {
-        return basicNumberConverter.convertTens(10)
-                + " " + quantitiveNumberNames.getNameWhenBetweenThreeAndTen();
+        return basicNumberConverter.convertTens(10) + " " + quantitiveNumberNames.getNameWhenBetweenThreeAndTen();
     }
 }

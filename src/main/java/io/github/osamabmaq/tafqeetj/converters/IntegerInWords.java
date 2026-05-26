@@ -2,117 +2,88 @@ package io.github.osamabmaq.tafqeetj.converters;
 
 import io.github.osamabmaq.tafqeetj.numbers.NumberSign;
 import io.github.osamabmaq.tafqeetj.numbers.positive.PositiveBasicNumbersPLacesNames;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class IntegerInWords {
+
     private NumberSign sign = NumberSign.POSITIVE;
+
     private String trillions;
+
     private String billions;
+
     private String millions;
+
     private String thousands;
+
     private String basicNumberGroup;
 
     public static IntegerInWords createZero() {
-        IntegerInWords zero = new IntegerInWords();
-        zero.setBasicNumberGroup(PositiveBasicNumbersPLacesNames.getInstance().getOnesMap().get(0));
-        return zero;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setTrillions(String trillions) {
-        if (trillions.isEmpty())
-            return;
-        this.trillions = trillions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBillions(String billions) {
-        if (billions.isEmpty())
-            return;
-        this.billions = billions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMillions(String millions) {
-        if (millions.isEmpty())
-            return;
-        this.millions = millions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setThousands(String thousands) {
-        if (thousands.isEmpty())
-            return;
-        this.thousands = thousands;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-
     public void setBasicNumberGroup(String basicNumberGroup) {
-        if (basicNumberGroup.isEmpty())
-            return;
-        this.basicNumberGroup = basicNumberGroup;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setSign(NumberSign sign) {
-        if (sign == null)
-            return;
-        this.sign = sign;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isTrillionsPresent() {
-        return trillions != null && !trillions.isEmpty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isBillionsPresent() {
-        return billions != null && !billions.isEmpty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isMillionsPresent() {
-        return millions != null && !millions.isEmpty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isThousandsPresent() {
-        return thousands != null && !thousands.isEmpty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isBasicNumberGroupPresent() {
-        return basicNumberGroup != null && !basicNumberGroup.isEmpty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public NumberSign getSign() {
-        return sign;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        IntegerInWords that = (IntegerInWords) o;
-        return sign == that.sign
-                && Objects.equals(trillions, that.trillions)
-                && Objects.equals(billions, that.billions)
-                && Objects.equals(millions, that.millions)
-                && Objects.equals(thousands, that.thousands)
-                && Objects.equals(basicNumberGroup, that.basicNumberGroup);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(sign, trillions, billions, millions, thousands, basicNumberGroup);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public String toString() {
-        List<String> numberInWords = new ArrayList<>();
-        if (isTrillionsPresent())
-            numberInWords.add(trillions);
-        if (isBillionsPresent())
-            numberInWords.add(billions);
-        if (isMillionsPresent())
-            numberInWords.add(millions);
-        if (isThousandsPresent())
-            numberInWords.add(thousands);
-        if (isBasicNumberGroupPresent())
-            numberInWords.add(basicNumberGroup);
-        return (sign == NumberSign.POSITIVE ? "" : "سالب ") + String.join(" و", numberInWords);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

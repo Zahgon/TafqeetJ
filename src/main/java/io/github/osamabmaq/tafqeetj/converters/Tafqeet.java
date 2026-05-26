@@ -4,7 +4,9 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class Tafqeet {
+
     private final IntegerToWordsConverter integerConverter = IntegerToWordsConverter.getInstance();
+
     private final DecimalToWordsConverter decimalConverter = DecimalToWordsConverter.getInstance();
 
     private static Tafqeet instance;
@@ -13,32 +15,30 @@ public class Tafqeet {
     }
 
     public static synchronized Tafqeet getInstance() {
-        if (instance == null)
-            instance = new Tafqeet();
-        return instance;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String doTafqeet(int number) {
-        return integerConverter.convert(number).toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String doTafqeet(byte number) {
-        return integerConverter.convert(number).toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String doTafqeet(short number) {
-        return integerConverter.convert(number).toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String doTafqeet(long number) {
-        return integerConverter.convert(number).toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String doTafqeet(BigInteger number) {
-        return integerConverter.convert(number).toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String doTafqeet(BigDecimal number) {
-        return decimalConverter.convert(number).toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

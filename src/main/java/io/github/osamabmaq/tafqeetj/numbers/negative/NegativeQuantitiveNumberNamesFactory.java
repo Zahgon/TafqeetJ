@@ -4,36 +4,20 @@ import io.github.osamabmaq.tafqeetj.numbers.QuantitiveNumberNamesFactory;
 import io.github.osamabmaq.tafqeetj.numbers.QuantitiveNumberNames;
 
 public class NegativeQuantitiveNumberNamesFactory implements QuantitiveNumberNamesFactory {
+
     private final static QuantitiveNumberNames thousands;
+
     private final static QuantitiveNumberNames millions;
+
     private final static QuantitiveNumberNames billions;
+
     private final static QuantitiveNumberNames trillions;
 
     static {
-        thousands = new QuantitiveNumberNames(
-                "ألف",
-                "ألفين",
-                "آلاف",
-                "ألفًا"
-        );
-        millions = new QuantitiveNumberNames(
-                "مليون",
-                "مليونين",
-                "ملايين",
-                "مليونًا"
-        );
-        billions = new QuantitiveNumberNames(
-                "مليار",
-                "مليارين",
-                "مليارات",
-                "مليارًا"
-        );
-        trillions = new QuantitiveNumberNames(
-                "ترليون",
-                "ترليونين",
-                "ترليونات",
-                "ترليونًا"
-        );
+        thousands = new QuantitiveNumberNames("ألف", "ألفين", "آلاف", "ألفًا");
+        millions = new QuantitiveNumberNames("مليون", "مليونين", "ملايين", "مليونًا");
+        billions = new QuantitiveNumberNames("مليار", "مليارين", "مليارات", "مليارًا");
+        trillions = new QuantitiveNumberNames("ترليون", "ترليونين", "ترليونات", "ترليونًا");
     }
 
     private static NegativeQuantitiveNumberNamesFactory instance;
@@ -42,28 +26,26 @@ public class NegativeQuantitiveNumberNamesFactory implements QuantitiveNumberNam
     }
 
     public synchronized static NegativeQuantitiveNumberNamesFactory getInstance() {
-        if (instance == null)
-            instance = new NegativeQuantitiveNumberNamesFactory();
-        return instance;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public QuantitiveNumberNames getThousands() {
-        return thousands;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public QuantitiveNumberNames getMillions() {
-        return millions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public QuantitiveNumberNames getBillions() {
-        return billions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public QuantitiveNumberNames getTrillions() {
-        return trillions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

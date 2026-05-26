@@ -4,19 +4,19 @@ import io.github.osamabmaq.tafqeetj.numbers.negative.NegativeBasicNumberPlacesNa
 import io.github.osamabmaq.tafqeetj.numbers.positive.PositiveBasicNumbersPLacesNames;
 
 public class BasicNumberConverterFactory {
-    private static final BasicNumberConverter positiveConverter =
-            new BasicNumberConverter(PositiveBasicNumbersPLacesNames.getInstance());
-    private static final BasicNumberConverter negativeConverter =
-            new BasicNumberConverter(NegativeBasicNumberPlacesNames.getInstance());
+
+    private static final BasicNumberConverter positiveConverter = new BasicNumberConverter(PositiveBasicNumbersPLacesNames.getInstance());
+
+    private static final BasicNumberConverter negativeConverter = new BasicNumberConverter(NegativeBasicNumberPlacesNames.getInstance());
 
     private BasicNumberConverterFactory() {
     }
 
     public static BasicNumberConverter getPositiveConverter() {
-        return positiveConverter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static BasicNumberConverter getNegativeConverter() {
-        return negativeConverter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }
